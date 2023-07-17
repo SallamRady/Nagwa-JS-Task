@@ -1,0 +1,18 @@
+img.imgLogo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+.main-nav-link {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin: auto 0.3rem;
+}
+
+.mainLinks .active{
+    color: #f5aa00;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px;
+}
