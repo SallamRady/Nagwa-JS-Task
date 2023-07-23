@@ -1,0 +1,17 @@
+.question-card {
+    background-color: beige;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.wrongAnswer {
+    background: red !important;
+    color: #fff !important;
+    border-color: red !important;
+}
+
+.correctAnswer {
+    background: green !important;
+    color: #fff !important;
+    border-color: green !important;
+}
