@@ -16,14 +16,15 @@ const Quiz = () => {
   const [words, setWords] = useState<IQuestion[]>([]);
   const navigator = useNavigate();
   const nextQuestion = (answer: string) => {
-    if(idx === 9){
-      console.log('score :',score);
-      navigator('/Result',{state:score})
+    if (idx === 9) {
+      console.log('score :', score);
+      navigator('/Result', { state: { score, words } })
       return;
     }
-    setIdx(idx + 1);
+    words[idx].user_answer = answer;
     if (answer === words[idx].pos)
       setScore(score + 10);
+    setIdx(idx + 1);
   }
 
   useEffect(() => {
@@ -52,9 +53,9 @@ const Quiz = () => {
         <div className="col-12 col-md-9 mx-auto my-2 mb-3">
           <div className="info">
             <span>{idx} / 10</span>
-            <span> {(idx / 10)*100} %</span>
+            <span> {(idx / 10) * 100} %</span>
           </div>
-          <ProgressBar animated now={idx * 10} />
+          <ProgressBar  now={idx * 10} />
         </div>
       </div>
       <SingleQuestion pos={words[idx]?.pos} word={words[idx]?.word} nextQuestion={nextQuestion} />

@@ -1,3 +1,17 @@
-*{
+* {
     box-sizing: border-box;
+}
+
+#root {
+    height: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex-grow: 1;
 }
